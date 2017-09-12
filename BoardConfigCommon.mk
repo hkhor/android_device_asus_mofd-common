@@ -123,11 +123,11 @@ TARGET_INIT_UMOUNT_AND_FSCK_IS_UNSAFE := true
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
 
 # Inline kernel building
-TARGET_KERNEL_SOURCE := kernel/asus/moorefield
-TARGET_KERNEL_ARCH := x86_64
-BOARD_KERNEL_IMAGE_NAME := bzImage
-TARGET_KERNEL_CONFIG := zenfone2_defconfig
-LZMA_RAMDISK_TARGETS := recovery
+#TARGET_KERNEL_SOURCE := kernel/asus/moorefield
+#TARGET_KERNEL_ARCH := x86_64
+#BOARD_KERNEL_IMAGE_NAME := bzImage
+#TARGET_KERNEL_CONFIG := zenfone2_defconfig
+#LZMA_RAMDISK_TARGETS := recovery
 #TARGET_KERNEL_APPEND_DTB := true
 
 # Kernel cmdline
