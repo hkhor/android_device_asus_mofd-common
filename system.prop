@@ -1,0 +1,4 @@
+# system.prop for mofd-common
+
+# Android Run Time
+ro.sys.fw.dex2oat_thread_count=4
