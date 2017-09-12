@@ -148,7 +148,7 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 USE_INTEL_SECURE_AVC := true
 
 # Properties
-TARGET_SYSTEM_PROP += device/asus/mofd-common/system.prop
+TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Settings for the Media SDK library and plug-ins:
 # - USE_MEDIASDK: use Media SDK support or not
