@@ -123,11 +123,11 @@ TARGET_INIT_UMOUNT_AND_FSCK_IS_UNSAFE := true
 TARGET_IGNORE_RO_BOOT_SERIALNO := true
 
 # Inline kernel building
-#TARGET_KERNEL_SOURCE := kernel/asus/moorefield
-#TARGET_KERNEL_ARCH := x86_64
-#BOARD_KERNEL_IMAGE_NAME := bzImage
-#TARGET_KERNEL_CONFIG := zenfone2_defconfig
-#LZMA_RAMDISK_TARGETS := recovery
+TARGET_KERNEL_SOURCE := kernel/asus/moorefield
+TARGET_KERNEL_ARCH := x86_64
+BOARD_KERNEL_IMAGE_NAME := bzImage
+TARGET_KERNEL_CONFIG := zenfone2_defconfig
+LZMA_RAMDISK_TARGETS := recovery
 #TARGET_KERNEL_APPEND_DTB := true
 
 # Kernel cmdline
@@ -148,7 +148,7 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 USE_INTEL_SECURE_AVC := true
 
 # Properties
-TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
+TARGET_SYSTEM_PROP += device/asus/mofd-common/system.prop
 
 # Settings for the Media SDK library and plug-ins:
 # - USE_MEDIASDK: use Media SDK support or not
