@@ -7,3 +7,5 @@ on property:ro.config.zram=true
     swapon_all /fstab.mofd_v1
     # Better OOM resistance
     write /proc/sys/vm/min_free_kbytes 32768
+    # Improve dirty expire
+    write /proc/sys/vm/dirty_expire_centisecs 200
