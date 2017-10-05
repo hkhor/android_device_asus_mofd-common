@@ -7,5 +7,20 @@ on property:ro.config.zram=true
     swapon_all /fstab.mofd_v1
     # Better OOM resistance
     write /proc/sys/vm/min_free_kbytes 32768
+    # Define the oom_adj values for the classes of processes that can be killed by the kernel. These are used in ActivityManagerService.
+   setprop ro.FOREGROUND_APP_ADJ 0
+   setprop ro.VISIBLE_APP_ADJ 1
+   setprop ro.SECONDARY_SERVER_ADJ 2
+   setprop ro.HIDDEN_APP_MIN_ADJ 7
+   setprop ro.CONTENT_PROVIDER_ADJ 14
+   setprop ro.EMPTY_APP_ADJ 15
+   # Define the memory thresholds at which the above process classes will be killed. These numbers are in pages (4k).
+   setprop ro.FOREGROUND_APP_MEM 15033
+   setprop ro.VISIBLE_APP_MEM 20044
+   setprop ro.SECONDARY_SERVER_MEM 25056
+   setprop ro.HIDDEN_APP_MEM 35078
+   setprop ro.CONTENT_PROVIDER_MEM 40089
+   setprop ro.EMPTY_APP_MEM 50112
     # Improve MinFree
     write /sys/module/lowmemorykiller/parameters/minfree 15033,20044,25056,35078,40089,50112
+    write /sys/module/lowmemorykiller/parameters/adj 0,1,2,7,14,15
