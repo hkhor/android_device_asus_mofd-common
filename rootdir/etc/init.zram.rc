@@ -5,3 +5,5 @@ on property:ro.config.zram=true
     write /proc/sys/vm/swappiness 70
     # Enable swaps described in the fstab
     swapon_all /fstab.mofd_v1
+    # Better OOM resistance
+    write /proc/sys/vm/min_free_kbytes 32768
